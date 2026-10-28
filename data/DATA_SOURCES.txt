@@ -1,0 +1,29 @@
+DATA SOURCES
+=============================================================================
+Primary source
+  Board of Governors of the Federal Reserve System, Survey of Household
+  Economics and Decisionmaking (SHED), public-use files, 2021 to 2024 waves.
+  Dataset DOI: 10.17016/datasets.002
+  Download page:
+    https://www.federalreserve.gov/consumerscommunities/shed_data.htm
+  Direct wave downloads (CSV):
+    .../files/SHED_public_use_data_2021_(CSV).zip
+    .../files/SHED_public_use_data_2022_(CSV).zip
+    .../files/SHED_public_use_data_2023_(CSV).zip
+    .../files/SHED_public_use_data_2024_(CSV).zip
+
+Files in this folder
+  SHED_disaster_mitigation_2021_2024.dta
+      Pooled analysis dataset, 47,236 respondent-waves, containing the
+      original SHED items used in the study and every constructed analysis
+      variable (experience, risk_perc, SEW, income_z, assets_z, debt_z, liq,
+      cc_bal, owner, age_z), harmonized across waves. Stata format 118.
+  by_wave/SHED_2021.dta ... SHED_2024.dta
+      The same data split by survey wave.
+
+Provenance note
+  The .dta files were harmonized from the four public-use waves listed above.
+  The raw-data path in stata/SHED_REPLICATION_FULL.do rebuilds the pooled dataset and all
+  constructed variables directly from the raw public CSVs, documenting every
+  harmonization decision (screening-gate coding of ND1 in 2023 and 2024,
+  reverse-coding of ND2, index construction and standardization).
